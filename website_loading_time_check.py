@@ -1010,7 +1010,7 @@ def email_send(mail_subject_arg, mail_body_arg):
 
 if not website_status_code_check(main_url):
     # main url does not return code 200
-    print("Agile main url inaccessible. delete ok html, send email, create err html")
+    print("Site main url inaccessible. delete ok html, send email, create err html")
     # check if ok html exists and remove it
     if os.path.exists(ok_file_path_name):
         os.remove(ok_file_path_name)
