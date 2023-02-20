@@ -162,10 +162,10 @@ elif not website_status_code_check(popup_url):
     if os.path.exists(ok_file_path_name):
         os.remove(ok_file_path_name)
     html_path_name = err_file_path_name
-    html_message = fhtml message"""
+    html_message = f"""html message"""
     create_update_html_file(html_path_name, html_message)
     mail_subject_arg = "Site popup url is not accessible!"
-    mail_body_arg = f"""email body """
+    mail_body_arg = f"""email body"""
     email_send(mail_subject_arg, mail_body_arg)
 else:
     # both urls are accessible
@@ -202,10 +202,10 @@ else:
         if os.path.exists(ok_file_path_name):
             os.remove(ok_file_path_name)
         html_path_name = err_file_path_name
-        html_message = f”””html message"""
+        html_message = f"""html message"""
         create_update_html_file(html_path_name, html_message)
         mail_subject_arg = f"Site {title} loading time is above service restart limit!"
-        mail_body_arg = f"""email body """
+        mail_body_arg = f"""email body"""
         email_send(mail_subject_arg, mail_body_arg)
         p = subprocess.Popen([complete_powershell_exe_file_path_name, complete_powershell_script_file_path_name])
         # powershell script waits 20 seconds before starting the service
@@ -224,10 +224,10 @@ else:
                 result.append(f"User {user_list[i]}: popup url loading time: {popup_loading_time_list[i]}")
         print(result)
         html_path_name = ok_file_path_name
-        html_message = f”””html message"""
+        html_message = f"""html message"""
         create_update_html_file(html_path_name, html_message)
         mail_subject_arg = f"Site {title} loading time is above warning limit!"
-        mail_body_arg = f"""email body """
+        mail_body_arg = f"""email body"""
         email_send(mail_subject_arg, mail_body_arg)
     # else all is good
     else:
